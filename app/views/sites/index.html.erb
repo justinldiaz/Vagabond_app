@@ -1,2 +1,11 @@
-<h1>Sites#index</h1>
-<p>Find me in app/views/sites/index.html.erb</p>
+<h1>Welcome to Vagabond</h1>
+<br>
+There are currently <%= @users.length %> who are registered.
+<br>
+<br>
+
+<%= link_to '<button type="button" class="btn btn-primary">Sign Up</button>'.html_safe, sign_up_path %>
+
+OR
+
+<%= link_to '<button type="button" class="btn btn-primary">Login</button>'.html_safe, login_path %>
