@@ -8,13 +8,14 @@ class PostsController < ApplicationController
 
 	# new_post GET    /posts/new(.:format)      posts#new
 	def new
+		#@user = User.find(params[:id])
 		@post = Post.new
 		render :new
 	end
 
 	# POST   /posts(.:format)          posts#create
 	def create
-		@user = User.find(params[:id])
+		#@user = User.find(params[:id])
 		post_params = params.require(:post).permit(:title, :content)
 		@post = Post.create(post_params)
 		redirect_to "/posts/#{@post.id}"
@@ -50,10 +51,10 @@ class PostsController < ApplicationController
 
 	# DELETE /posts/:id(.:format)      posts#destroy
 	def destroy
-	user = User.find params[:user_id]
-    post = Post.find params[:id]
-    post.destroy
-    redirect_to # ?? user_articles_path(user)
+		user = User.find params[:user_id]
+    	post = Post.find params[:id]
+    	post.destroy
+    	redirect_to # ?? user_articles_path(user)
 	end
 
 end
