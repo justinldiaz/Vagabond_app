@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "sites#index"
 
   resources :users, except: [:new]
+  resources :posts
   get "/sign_up", to: "users#new"
 
   get "/login", to: "sessions#new"
