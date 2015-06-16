@@ -3,7 +3,7 @@
 <div>
 <div class="col-sm-3" id="sidebar">
 	<h1 class"col-xs-9"><%= @post.user.first_name %></h1>
-	<a class="logo" href="#"><img class="img-circle" src="http://en.gravatar.com/userimage/89188293/f1a1fad796be8a6aee01f4d34e9c6220.jpg?size=200"></a>
+	<a class="logo"><%= image_tag avatar_url(current_user, 100) %></a>
 </div>
 </div>
 
