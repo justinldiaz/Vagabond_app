@@ -44,5 +44,8 @@ ActiveRecord::Schema.define(version: 20150616210053) do
     t.integer  "city_id"
   end
 
+  add_index "users", ["city_id"], name: "index_users_on_city_id", using: :btree
+
   add_foreign_key "posts", "cities"
+  add_foreign_key "users", "cities"
 end
