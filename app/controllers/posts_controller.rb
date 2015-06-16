@@ -58,7 +58,7 @@ class PostsController < ApplicationController
 	#stored these params here for easy reuse
 	private
 	def post_params
-		params.require(:post).permit(:id, :user_id, :title, :content)
+		params.require(:post).permit(:id, :user_id, :title, :content, :city_id)
 	end
 
 end
