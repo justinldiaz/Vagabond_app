@@ -1,0 +1,11 @@
+<%= render partial: "users/nav", locals: {user: @user} %>
+<h1>Edit this post</h1>
+
+<div>
+<%= form_for @post do |f|%>
+	<div><%= f.text_field :title, placeholder: "Post title" %></div>
+	<div><%= f.text_area :content, placeholder: "Post content" %></div>
+	<%= f.submit "Update"%>
+	<% end %>
+
+</div>
