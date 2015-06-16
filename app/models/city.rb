@@ -1,4 +1,4 @@
 class City < ActiveRecord::Base
 	has_many :users
-	attr_accessor :users
+	has_many :posts
 end
