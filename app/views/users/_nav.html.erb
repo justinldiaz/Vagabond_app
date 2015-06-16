@@ -17,6 +17,7 @@
             <ul class="dropdown-menu">
               <li class="dropdown-header">User Menu</li>
               <li><a href="<%= user_path current_user.id%>">Profile</a></li>
+              <li><a href="<%= edit_user_path current_user.id%>">Edit Profile</a></li>
               <li><a href="/posts/new">New Post</a></li>
               <li><a href="/cities">Cities</a></li>
               <li><a href="/logout">Logout</a></li>
