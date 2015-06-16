@@ -16,10 +16,10 @@ d = User.create(first_name: "David",last_name:"Lastname",email:"ddeuber@gmail.co
 
 jeremy = User.create(first_name: "Jeremy",last_name:"Lastname",email:"jeremybrenner0@gmail.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
 
-j.posts.create(title: "Jared's post", content: "This place is awesome")
+j.posts.create(title: "Jared's post", content: "This place is awesome", city: sf)
 
-l.posts.create(title: "Linda's post", content: "This place is awesome")
+l.posts.create(title: "Linda's post", content: "This place is awesome", city: sf)
 
-d.posts.create(title: "David's post", content: "This place is awesome")
+d.posts.create(title: "David's post", content: "This place is awesome", city: sf)
 
-jeremy.posts.create(title: "Jeremy's post", content: "This place is awesome")
+jeremy.posts.create(title: "Jeremy's post", content: "This place is awesome", city: sf)
