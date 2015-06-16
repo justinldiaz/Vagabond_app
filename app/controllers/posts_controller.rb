@@ -15,16 +15,18 @@ class PostsController < ApplicationController
 
 	# POST   /posts(.:format)          posts#create
 	def create
-		#@user = User.find(params[:id])
+		
 		post_params = params.require(:post).permit(:title, :content)
-		@post = Post.create(post_params)
+		@post = current_user.posts.create(post_params)
+		# Couldn't find User with 'id'=
+		
 		redirect_to "/posts/#{@post.id}"
 
 	end
 
 	# post GET    /posts/:id(.:format)      posts#show
 	def show
-		@user = User.find(params[:id])
+		#@user = User.find(params[:id])
 		@post = Post.find(params[:id])
 	end
 

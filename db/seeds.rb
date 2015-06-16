@@ -6,8 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-u1= User.create({first_name: "Bob", last_name: "Sagit", email: "bob@aol.com", password_digest: "dsfdsfsdfsdf"})
+j = User.create(first_name: "Jared",last_name:"Smith",email:"neuralsplash@gmail.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
 
-p1 = Post.create({title: "that one day in melbourne", content: "we had a long long way to walk", user_id: 1})
-p2 = Post.create({title: "that other day in osaka", content: "the miso tasted better than it does in canada", user_id: 1})
+l = User.create(first_name: "Linda",last_name:"Lastname",email:"linda@dot.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
 
+d = User.create(first_name: "David",last_name:"Lastname",email:"ddeuber@gmail.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
+
+jeremy = User.create(first_name: "Jeremy",last_name:"Lastname",email:"jeremybrenner0@gmail.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
