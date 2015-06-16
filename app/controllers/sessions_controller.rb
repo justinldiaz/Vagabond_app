@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 		if @user
 			login(@user)
 			puts "User logged in"
-			redirect_to user_path @user
+			redirect_to user_path @user.id
 		else
 			redirect_to login_path
 		end
