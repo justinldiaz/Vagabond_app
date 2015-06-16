@@ -1,7 +1,11 @@
-<h1>Posts#show</h1>
+<%= render partial: "users/nav", locals: {user: @user} %>
+<h1>Post #<%= @post.id %></h1>
 
+<h3>Author:</h3>
 
-<ul>
-	<li><%= @post.title %></li>
-	<li><%= @post.content %></li>
-</ul>
+Title: <%= @post.title %><br>
+Body: <%= @post.content %>
+
+<br>
+<%= link_to "Back to Profile", user_path(@post.user_id) %>
+</br>

@@ -16,7 +16,6 @@ class PostsController < ApplicationController
 	# POST   /posts(.:format)          posts#create
 	def create
 		
-		post_params = params.require(:post).permit(:title, :content)
 		@post = current_user.posts.create(post_params)
 		# Couldn't find User with 'id'=
 		
@@ -32,31 +31,34 @@ class PostsController < ApplicationController
 
 	# edit_post GET    /posts/:id/edit(.:format) posts#edit
 	def edit
-		@user = User.find(params[:id])
+		# @user = User.find(params[:id])
 		@post = Post.find(params[:id])
-
 		render :edit
+	end
 
 	# PUT    /posts/:id(.:format)      posts#update
 	def update
-		@user = User.find params[:user_id]
+		# @user = User.find params[:user_id]
     	@post = Post.find params[:id]
-    	if @post.update_attributes(post_params) 
-      		redirect_to # ? user_post_path(@user, @post)
+    	if @post.update(post_params) 
+      		redirect_to "/posts/#{@post.id}"
     	else
       		@errors = @post.errors.messages
-      	render :edit
-    end
-	end
-
+    	end
 	end
 
 	# DELETE /posts/:id(.:format)      posts#destroy
+	# doesnt need a user for reference, deletes based on article param
 	def destroy
-		user = User.find params[:user_id]
     	post = Post.find params[:id]
     	post.destroy
-    	redirect_to # ?? user_articles_path(user)
+    	redirect_to user_path(current_user.id)
+	end
+
+	#stored these params here for easy reuse
+	private
+	def post_params
+		params.require(:post).permit(:id, :user_id, :title, :content)
 	end
 
 end
