@@ -5,6 +5,7 @@
 <%= form_for @post do |f|%>
 	<div><%= f.text_field :title, placeholder: "Post title" %></div>
 	<div><%= f.text_area :content, placeholder: "Post content" %></div>
+	<div><%= f.collection_select(:city_id, City.all, :id, :name) %></div>
 	<%= f.submit "Submit"%>
 	<% end %>
 
