@@ -28,7 +28,7 @@ chi = City.create(name: "Chicago", picture: "http://i359.photobucket.com/albums/
 
 bos = City.create(name: "Boston", picture: "http://i1211.photobucket.com/albums/cc426/Sandybe223/Boston/2131.jpg" )
 
-ny = City.create(name: "New York", picture: "http://i65.photobucket.com/albums/h235/Ignwar/Album%20Panoramic/OurCivilization03.jpg" )
+ny = City.create(name: "New York", picture: "http://www.burgessyachts.com/media/adminforms/locations/n/e/new_york_1.jpg" )
 
 sf = City.create(name: "San Francisco", picture: "http://i65.photobucket.com/albums/h235/Ignwar/Album%20Cities/MoonoverSanFrancisco.jpg" )
 
