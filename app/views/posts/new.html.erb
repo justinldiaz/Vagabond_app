@@ -1,0 +1,10 @@
+<h1>Posts#new</h1>
+
+<div>
+<%= form_for @post do |f|%>
+	<%= f.text_field :title, placeholder: "Post title" %>
+	<%= f.text_area :content, placeholder: "Post content" %>
+	<%= f.submit %>
+	<% end %>
+
+</div>
