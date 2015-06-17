@@ -28,12 +28,14 @@
                         <% @posts.reverse.each do |p| %>                   
                         <!--/stories-->
                         <div class="row">    
+                                   <%= button_to " x ", post_path(p.id), :class => "btn btn-xs btn-danger pull-right", :method => :delete,  data: { confirm: "Are you sure you want to delete #{p.title}?" } %>
                           <div class="col-sm-10">
                             <h3><%= link_to "#{p.title}", post_path(p.id) %></h3> <span class="label label-default"><%= p.city.name %></span>
-                            <div>&nbsp</div>
-                            	<%= button_to "Edit Post", edit_post_path(p.id), :class => "btn btn-xs btn-primary", :method => :get  %>
-								<%= button_to "Delete Post", post_path(p.id), :class => "btn btn-xs btn-danger", :method => :delete,  data: { confirm: "Are you sure you want to delete #{p.title}?" } %>
                           </div>
+                        </div>
+                        <br>
+                        <div class="col-md-12 row">
+                                <%= button_to "Edit Post", edit_post_path(p.id), :class => "btn btn-xs btn-primary", :method => :get  %>
                         </div>
                          <div class="row divider">    
                            <div class="col-sm-12"><hr></div>
@@ -46,3 +48,4 @@
             </div>
         </div>
     </div>
+</div>
