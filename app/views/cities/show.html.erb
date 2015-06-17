@@ -1,6 +1,7 @@
 <%= render partial: "/users/nav" %>
 <h1><%= @city.name %></h1>
-<img src="<%= @city.picture %>">
+
+<a><img class="city" src="<%= @city.picture %>"></a>
 
 <h2>recent travel log posts</h3>
 <% @cityposts.each do |post| %>

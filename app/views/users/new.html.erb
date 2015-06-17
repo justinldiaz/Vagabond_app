@@ -11,6 +11,7 @@
 	<%= u.text_field :email, placeholder: "Email" %><br>
 	<%= u.password_field :password, placeholder: "Password" %><br>
 	<%= u.password_field :password_confirmation, placeholder: "Confirm Password" %>
+	<%= u.collection_select(:city_id, City.all, :id, :name) %>
 	<br>
 	<%= u.submit "Sign Up" %><br>
 <% end %>

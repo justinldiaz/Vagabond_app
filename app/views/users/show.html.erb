@@ -5,7 +5,8 @@
             <!-- sidebar -->
             <div class="column col-sm-3" id="sidebar">
             <a class="logo"><%= image_tag avatar_url(current_user, 100) %></a>
-            <div class="profile-item">Hi, <%= @user.first_name %></div>
+            <div class="profile-item"><%= @user.first_name %></div>
+            <div class="profile-item"><%= @user.city.name %></div>
             <br>
             <div class="profile-item">Member since: <%= @user.created_at.strftime("%m/%d/%y") %></div>
             <%= button_to "Make New Post", new_post_path, :class => "btn btn-xs btn-primary post-button", :method => :get  %>

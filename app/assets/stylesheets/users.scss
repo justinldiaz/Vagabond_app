@@ -107,7 +107,7 @@ a {
 
 /* bootstrap overrides */
 
-h1,h2,h3 {
+h1,h2,h3,p {
    font-weight:800;
    font-family:'Open Sans',arial,sans-serif;
 }
@@ -136,4 +136,9 @@ small.text-muted {
 }
 img {
   border-radius: 100px;
+}
+
+img.city {
+  width: 300px;
+  border-radius: 0px;
 }
