@@ -11,10 +11,13 @@ html, body {
    font-family:'Open Sans',arial,sans-serif;
    padding-top: 0;
 }
-
+/* reset container - do not override */
 .container {
-
+  width: 100%;
+  padding: 0;
 }
+
+
 
 a {
   color:#222222;
@@ -81,7 +84,7 @@ a {
   position:absolute;bottom:5px;
 }
 #footer {
-  margin-bottom:20px;
+
 }
 
 .post-button {
@@ -169,7 +172,7 @@ header h1 {
   padding-top: 20px;
   width: 100%;
   margin-top: 50px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   position: fixed;
   bottom: 0px;
 }
