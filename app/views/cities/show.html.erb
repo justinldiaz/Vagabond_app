@@ -1,11 +1,19 @@
 <%= render partial: "/users/nav" %>
 <h1><%= @city.name %></h1>
-<img src="<%= @city.picture %>">
+
+<a><img class="city" src="<%= @city.picture %>"></a>
 
 <h2>recent travel log posts</h3>
-<% @cityposts.each do |post| %>
-	<div class="post">
-		<h3><%= post.title %></h3>
-		<p><%= post.content %></p>
-	</div>
+	<% @cityposts.each do |p| %>
+    <div class="row">    
+      <div class="col-sm-10">
+        <h3><%= link_to "#{p.title}", post_path(p.id) %></h3> <span class="label label-default"><%= p.city.name %></span>
+        <div>&nbsp</div>
+        	<%= button_to "Edit Post", edit_post_path(p.id), :class => "btn btn-xs btn-primary", :method => :get  %>
+			<%= button_to "Delete Post", post_path(p.id), :class => "btn btn-xs btn-danger", :method => :delete,  data: { confirm: "Are you sure you want to delete #{p.title}?" } %>
+      </div>
+    </div>
+    <div class="row divider">    
+       <div class="col-sm-12"><hr></div>
+    </div>             
 <% end %>

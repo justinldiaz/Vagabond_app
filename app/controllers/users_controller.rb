@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 		   login(@user)
 		   redirect_to user_path @user
 		else
+		   flash[:nosignup] = @user.errors
 		   redirect_to sign_up_path
 		end
 	end
@@ -38,7 +39,7 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:id, :first_name, :last_name, :email, :password)
+		params.require(:user).permit(:id, :first_name, :last_name, :email, :password, :password_confirmation)
 	end
 
 	

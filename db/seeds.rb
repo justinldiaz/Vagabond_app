@@ -28,19 +28,19 @@ chi = City.create(name: "Chicago", picture: "http://i359.photobucket.com/albums/
 
 bos = City.create(name: "Boston", picture: "http://i1211.photobucket.com/albums/cc426/Sandybe223/Boston/2131.jpg" )
 
-ny = City.create(name: "New York", picture: "http://i65.photobucket.com/albums/h235/Ignwar/Album%20Panoramic/OurCivilization03.jpg" )
+ny = City.create(name: "New York", picture: "http://www.burgessyachts.com/media/adminforms/locations/n/e/new_york_1.jpg" )
 
 sf = City.create(name: "San Francisco", picture: "http://i65.photobucket.com/albums/h235/Ignwar/Album%20Cities/MoonoverSanFrancisco.jpg" )
 
 sea = City.create(name: "Seattle", picture: "http://i249.photobucket.com/albums/gg215/wlewis7402/Seattle.jpg")
 
-j = User.create(first_name: "Jared",last_name:"Smith",email:"neuralsplash@gmail.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
+j = User.create(first_name: "Jared",last_name:"Smith",email:"neuralsplash@gmail.com", city: sf,password: "vagabond",password_confirmation: "vagabond")
 
-l = User.create(first_name: "Linda",last_name:"Lastname",email:"linda@dot.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
+l = User.create(first_name: "Linda",last_name:"Lastname",email:"linda@dot.com",password: "vagabond",password_confirmation: "vagabond",city: sf)
 
-d = User.create(first_name: "David",last_name:"Lastname",email:"ddeuber@gmail.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
+d = User.create(first_name: "David",last_name:"Lastname",email:"ddeuber@gmail.com",password: "vagabond",password_confirmation: "vagabond",city: sf)
 
-jeremy = User.create(first_name: "Jeremy",last_name:"Lastname",email:"jeremybrenner0@gmail.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
+jeremy = User.create(first_name: "Jeremy",last_name:"Lastname",email:"jeremybrenner0@gmail.com",password: "vagabond",password_confirmation: "vagabond",city: sf)
 
 j.posts.create(title: "Jared's post", content: "This place is awesome", city: sf)
 
