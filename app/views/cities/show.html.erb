@@ -4,7 +4,7 @@
 <a><img class="city" src="<%= @city.picture %>"></a>
 
 <h2>recent travel log posts</h3>
-	<% @cityposts.each do |p| %>
+	<% @cityposts.reverse.each do |p| %>
     <div class="row">    
       <div class="col-sm-10">
         <h3><%= link_to "#{p.title}", post_path(p.id) %></h3> <span class="label label-default"><%= p.city.name %></span>
