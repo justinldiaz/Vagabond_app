@@ -27,6 +27,6 @@
 		<div class="col-md-3 col-md-offset-4"><%= u.collection_select(:city_id, City.all, :id, :name) %></div><br>
 	</div><br>
 
-	<div class="col-md-2 col-md-offset-4"><%= u.submit "Sign Up" %></div><br>
+	<div class="col-md-2 col-md-offset-4"><%= u.submit "Sign Up", class: "btn btn-default" %></div><br>
 <% end %>
 
