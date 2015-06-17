@@ -1,12 +1,10 @@
-<% if flash['nosignup'] %>
-	<% flash['nosignup'].each do |k,v| %>
-		<div class="alert-danger"><%= p v[0] %></div>
+<div class= "col-md-3 col-md-offset-4"><% if flash['nosignup'] %>
+		<% flash['nosignup'].each do |k,v| %>
+			<div class="alert-danger text-center"><%= p v[0] %></div>
+		<% end %>
 	<% end %>
-<% end %>
-
-<h1 class="col-md-3 col-md-offset-4">Sign Up Here</h1>
-
-
+</div>
+<h1 class="col-md-3 col-md-offset-4 text-center">Sign Up Here</h1>
 <%= form_for @user do |u| %>
 	<div class="row">
 		<div class="col-md-3 col-md-offset-4"><%= u.text_field :first_name, placeholder: "First Name", class: "form-control" %></div><br>
@@ -29,10 +27,10 @@
 	</div><br>
 
 	<div class="row">
-		<div class="col-md-3 col-md-offset-4"><%= u.collection_select(:city_id, City.all, :id, :name) %></div><br>
+		<div class="col-md-3 col-md-offset-4 text-center"><%= u.collection_select(:city_id, City.all, :id, :name) %></div><br>
 	</div><br>
 
-	<div class="col-md-2 col-md-offset-4"><%= u.submit "Sign Up", class: "btn btn-default" %></div><br>
+	<div class="col-md-3 col-md-offset-4"><%= u.submit "Sign Up", class: "btn btn-default center-block" %></div><br>
 <% end %>
 
 
