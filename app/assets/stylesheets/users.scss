@@ -1,4 +1,3 @@
-
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700');
 
 
@@ -10,7 +9,6 @@ html, body {
 
 a {
   color:#222222;
-
 }
 
 .wrapper, .row {
@@ -65,7 +63,7 @@ a {
 }
 
 #sidebar, #sidebar a {
-	padding-top: 100px;
+	padding-top: 60px;
     color: black;
     text-align: center
 }
@@ -135,6 +133,7 @@ h1,h2,h3,p {
 small.text-muted {
   font-family:courier,courier-new,monospace;
 }
+
 img {
   border-radius: 100px;
 }
@@ -143,3 +142,4 @@ img.city {
   width: 300px;
   border-radius: 0px;
 }
+
