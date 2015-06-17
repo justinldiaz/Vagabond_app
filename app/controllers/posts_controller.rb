@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 	# posts GET    /posts(.:format)          posts#index
 	def index
 		@posts = Post.all
+		authorize @posts, :index?
 		render :index
 	end
 
