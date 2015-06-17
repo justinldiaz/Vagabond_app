@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'gravtastic'
-
 gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -49,6 +47,5 @@ group :development, :test do
   gem 'spring'
 
   gem 'rspec-rails', '~> 3.0.0'
-
 end
 
