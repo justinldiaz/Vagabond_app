@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
 
 	def show
-		@user = User.find(params[:id])
+		@user = User.find(params.id)
 		@posts = @user.posts
 	end
 
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:id, :first_name, :last_name, :email, :password, :password_confirmation)
+		params.require(:user).permit(:id, :first_name, :last_name, :email, :password, :password_confirmation, :city_id)
 	end
 
 	
