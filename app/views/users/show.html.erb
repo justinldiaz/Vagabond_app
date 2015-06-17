@@ -4,11 +4,11 @@
         <div class="row">
             <!-- sidebar -->
             <div class="column col-sm-3" id="sidebar">
-                <a class="logo" href="#"><img src="http://4.bp.blogspot.com/-6Y8blNYlkdo/UlXn4Xik9-I/AAAAAAAAvfQ/NpqSuXYD8Zg/s1600/profile.png"></a>
-                    <div class="profile-item">Hi, <%= @user.first_name %></div>
-                    <br>
-                    <div class="profile-item">Member since: <%= @user.created_at.strftime("%m/%d/%y") %></div>
-                    <%= button_to "Make New Post", new_post_path, :class => "btn btn-xs btn-primary post-button", :method => :get  %>
+            <a class="logo"><%= image_tag avatar_url(current_user, 200) %></a>
+            <div class="profile-item">Hi, <%= @user.first_name %></div>
+            <br>
+            <div class="profile-item">Member since: <%= @user.created_at.strftime("%m/%d/%y") %></div>
+            <%= button_to "Make New Post", new_post_path, :class => "btn btn-xs btn-primary post-button", :method => :get  %>
             </div>
             <!-- /sidebar -->
           
