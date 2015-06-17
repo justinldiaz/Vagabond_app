@@ -1,0 +1,12 @@
+<%= render partial: "/users/nav" %>
+<h1><%= @city.name %></h1>
+
+<a><img class="city" src="<%= @city.picture %>"></a>
+
+<h2>recent travel log posts</h3>
+<% @cityposts.each do |post| %>
+	<div class="post">
+		<h3><%= post.title %></h3>
+		<p><%= post.content %></p>
+	</div>
+<% end %>
