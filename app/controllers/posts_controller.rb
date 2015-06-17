@@ -32,6 +32,7 @@ class PostsController < ApplicationController
 	# edit_post GET    /posts/:id/edit(.:format) posts#edit
 	def edit
 		# @user = User.find(params[:id])
+
 		@post = Post.find(params[:id])
 		render :edit
 	end
@@ -50,9 +51,10 @@ class PostsController < ApplicationController
 	# DELETE /posts/:id(.:format)      posts#destroy
 	# doesnt need a user for reference, deletes based on article param
 	def destroy
+		session[:return_to] ||= request.referer
     	post = Post.find params[:id]
     	post.destroy
-    	redirect_to user_path(current_user.id)
+    	redirect_to session.delete(:return_to)
 	end
 
 	#stored these params here for easy reuse

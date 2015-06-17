@@ -1,11 +1,15 @@
+
 <h1 class="col-md-3 col-md-offset-4">Sign Up Here</h1>
 <br>
+
+
 
 <% if flash['nosignup'] %>
 	<% flash['nosignup'].each do |k,v| %>
 		<div class="alert-danger"><%= p v[0] %></div>
 	<% end %>
 <% end %>
+
 <%= form_for @user do |u| %>
 	<%= u.text_field :first_name, placeholder: "First Name" %><br>
 	<%= u.text_field :last_name, placeholder: "Last Name" %><br>
@@ -16,6 +20,9 @@
 	<br>
 	<%= u.submit "Sign Up" %><br>
 <% end %>
+
+
+<h1 class="col-md-3 col-md-offset-4">Sign Up Here</h1>
 
 
 <%= form_for @user do |u| %>
@@ -41,4 +48,5 @@
 
 	<div class="col-md-2 col-md-offset-4"><%= u.submit "Sign Up" %></div><br>
 <% end %>
->>>>>>> 1d4d478fc1a59d21df092dab24e37526648d0176
+
+
