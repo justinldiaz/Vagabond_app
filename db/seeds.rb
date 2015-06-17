@@ -34,13 +34,13 @@ sf = City.create(name: "San Francisco", picture: "http://i65.photobucket.com/alb
 
 sea = City.create(name: "Seattle", picture: "http://i249.photobucket.com/albums/gg215/wlewis7402/Seattle.jpg")
 
-j = User.create(first_name: "Jared",last_name:"Smith",email:"neuralsplash@gmail.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
+j = User.create(first_name: "Jared",last_name:"Smith",email:"neuralsplash@gmail.com", city: sf,password: "vagabond",password_confirmation: "vagabond")
 
-l = User.create(first_name: "Linda",last_name:"Lastname",email:"linda@dot.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
+l = User.create(first_name: "Linda",last_name:"Lastname",email:"linda@dot.com",password: "vagabond",password_confirmation: "vagabond",city: sf)
 
-d = User.create(first_name: "David",last_name:"Lastname",email:"ddeuber@gmail.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
+d = User.create(first_name: "David",last_name:"Lastname",email:"ddeuber@gmail.com",password: "vagabond",password_confirmation: "vagabond",city: sf)
 
-jeremy = User.create(first_name: "Jeremy",last_name:"Lastname",email:"jeremybrenner0@gmail.com",password_digest:"$2a$10$GODvPorO5F/TxMkcD33ws.pVwPwWulwb8ng0GmMMVFjpMuJCxdEGO")
+jeremy = User.create(first_name: "Jeremy",last_name:"Lastname",email:"jeremybrenner0@gmail.com",password: "vagabond",password_confirmation: "vagabond",city: sf)
 
 j.posts.create(title: "Jared's post", content: "This place is awesome", city: sf)
 
