@@ -1,0 +1,6 @@
+<%= render partial: "/users/nav" %>
+<h1>Cities</h1>
+
+<% @cities.each do |city| %>
+<h4><%= link_to "#{city.name}", city_path(city.id)  %>  (<%= city.posts.length %>) </h2>
+<% end %>
