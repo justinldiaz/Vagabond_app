@@ -1,6 +1,10 @@
 <%= render partial: "users/nav", locals: {user: @user} %>
 <h1>Make a new post</h1>
-
+<% if flash['nopost'] %>
+	<% flash['nopost'].each do |k,v| %>
+		<div class="alert-danger"><%= p v[0] %></div>
+	<% end %>
+<% end %>
 <div>
 <%= form_for @post do |f|%>
 	<div><%= f.text_field :title, placeholder: "Post title" %></div>
