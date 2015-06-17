@@ -1,11 +1,41 @@
-<h1>Welcome to Vagabond</h1>
-<br>
-There are currently <%= @users.length %> who are registered.
-<br>
-<br>
+<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+<div class="container" style="width: 100%; padding-right: 0px; padding-left: 0px;">
+	<header class="home">
+		<span id="logo">V</span><h1>Welcome to Vagabond</h1>
+	</header>
+	<div class="row">
+		<div class="col-md-9 center-block clear-float">
+			<div  class="center-block clear-float" style="height: 540px; width: 960px; background-color: #c67d00;"><!-- iframe for video -->
+			
+			<!-- <iframe class="center-block clear-float" src="https://avvimeo-a.akamaihd.net/62249/679/126403121.mp4?token2=1434502384_5d86e3b08821a2625743ac17c74d6606&amp;aksessionid=c64e6aaf9a0a35bb&amp;ns=4" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
 
-<%= link_to '<button type="button" class="btn btn-primary">Sign Up</button>'.html_safe, sign_up_path %>
+			<iframe width="960" height="540" src="https://www.youtube.com/embed/UGnrT0F-Igs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
-OR
+			</div>
+		</div>
+	</div><!-- end row -->
 
-<%= link_to '<button type="button" class="btn btn-primary">Login</button>'.html_safe, login_path %>
+	<div class="row">
+
+		<div class="col-md-9 center-block clear-float margin50">
+			<div class="row" style="padding-left: 100px;">
+			<div class="col-md-3 col-md-offset-2 well clean">
+				<%= link_to '<button class="btn btn-lg btn-danger center-block">Sign Up</button>'.html_safe, sign_up_path %>
+				<p class="text-center top-margin20">Sign Up and travel with us</p>
+			</div>
+			<div class="col-md-3 col-md-offset-1 well clean">				
+				<%= link_to '<button class="btn btn-lg btn-warning center-block">Login</button>'.html_safe, login_path %>
+				<p class="text-center top-margin20">Sign in and share!</p>
+			</div>
+		</div>
+		</div>
+
+	</div>
+
+		<div id="footer">
+			<p class="text-center">&copy; Vagabond Travels, Inc. <span style=
+			"margin-left: 20px;">There are currently <%= @users.length %> who are registered.</span></p>
+		</div>
+
+
+</div><!-- end container -->
