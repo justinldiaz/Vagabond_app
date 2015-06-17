@@ -1,12 +1,19 @@
-<h1 class="col-md-2 col-md-offset-4">Login</h1>
+<div class= "col-md-3 col-md-offset-4"><% if flash['nosignup'] %>
+		<% flash['nosignup'].each do |k,v| %>
+			<div class="alert-danger"><%= p v[0] %></div>
+		<% end %>
+	<% end %>
+</div>
+<h1 class="col-md-3 col-md-offset-4 text-center">Login</h1>
 <br>
 <%= form_for @user, url: "/login", method: "post" do |u| %>
 	<div class="row">
 	<div class="col-md-3 col-md-offset-4"><%= u.text_field :email, placeholder: "Email", class: "form-control" %></div>
 	</div>
 	<div class="row"><br>
-	<div class="col-md-3 col-md-offset-4"><%= u.password_field :password, placeholder: "Password", class: "form-control" %></div></div>
+	<div class="col-md-3 col-md-offset-4"><%= u.password_field :password, placeholder: "Password", class: "form-control" %></div>
+	</div>
 	<br>
-	<div class="col-md-2 col-md-offset-5"><%= u.submit "Login", class: "btn btn-default" %></div><br>
+	<div class="col-md-3 col-md-offset-4"><%= u.submit "Login", class: "btn btn-default center-block" %></div><br>
 <% end %>
 </div>
