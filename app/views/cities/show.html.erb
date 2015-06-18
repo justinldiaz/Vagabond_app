@@ -8,12 +8,16 @@
 
   <h2>recent travel log posts</h2>
 	 <% @cityposts.reverse.each do |p| %>
-      <div class="row well">    
+      <div class="row well"> 
+      <% if current_user == p.user %>   
       <%= button_to " x ", post_path(p.id), :class => "btn btn-xs btn-danger pull-right", :method => :delete,  data: { confirm: "Are you sure you want to delete #{p.title}?" } %>
+      <% end%>  
       <div class="col-md-8">
         <h3><%= link_to "#{p.title}", post_path(p.id) %></h3> 
         <div class="col-md-3 row top-margin20">
+      <% if current_user == p.user %>
         <%= button_to "Edit Post", edit_post_path(p.id), :class => "btn btn-xs btn-primary", :method => :get  %>
+      <% end%> 
       </div>
         <!-- <span class="label label-default"><%= p.city.name %></span>-->
       
