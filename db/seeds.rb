@@ -6,7 +6,41 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+toky = City.create(name: "Tokyo", picture: "http://www.urlaubsguru.at/wp-content/uploads/2013/08/Artikelbild_Tokio_2-585x470.jpg" )
+
+sidn = City.create(name: "Sidney", picture: "http://www.papeldeparede.etc.br/wallpapers/australia--sidney_7374_1920x1200.jpg" )
+
+sing = City.create(name: "Singapore", picture: "http://i.telegraph.co.uk/multimedia/archive/02659/deal-singapore_2659071b.jpg" )
+
+bang = City.create(name: "bangkok", picture: "http://bangkok.peninsula.com/en/~/media/Images/Bangkok/Leaderboard/PBK_Landing_Leaderboard.ashx?mw=1280" )
+
+amst = City.create(name: "Amsterdam", picture: "https://www.shortstay-amsterdam.com/wp-content/uploads/2014/11/apartment-13.jpg" )
+
 reno = City.create(name: "Reno", picture: "http://i361.photobucket.com/albums/oo59/ipavel4u/lake%20tahoe%20and%20reno/DSC00778-1.jpg" )
+
+lond = City.create(name: "London", picture: "http://lawsonsanddaughters.com/wp-content/uploads/2014/09/London1.jpg" )
+
+gibr = City.create(name: "Gibraltar", picture: "https://www.defencetalk.com/wp-content/uploads/2013/08/Gibraltar.jpg" )
+
+auck = City.create(name: "Auckland", picture: "http://i.telegraph.co.uk/multimedia/archive/02311/b10-auckland_2311071k.jpg" )
+
+pert = City.create(name: "Perth", picture: "http://i.telegraph.co.uk/multimedia/archive/02353/perth_2353704k.jpg" )
+
+calg = City.create(name: "Calgary", picture: "http://i.telegraph.co.uk/multimedia/archive/02311/b05-calgary_2311080k.jpg" )
+
+vanc = City.create(name: "Vancouver", picture: "http://i.telegraph.co.uk/multimedia/archive/02311/b03-vancouver_2311063k.jpg" )
+
+vien = City.create(name: "Vienna", picture: "http://i.telegraph.co.uk/multimedia/archive/02311/b02-vienna_2311068k.jpg" )
+
+kara = City.create(name: "Karachi", picture: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Karachi_city.jpg" )
+
+beij = City.create(name: "Beijing", picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/View_of_Beijing.jpg/1024px-View_of_Beijing.jpg " )
+
+tian = City.create(name: "Tianjin", picture: "http://cdn.superbwallpapers.com/wallpapers/world/tianjin-8009-2560x1600.jpg" )
+
+ista = City.create(name: "Istanbul", picture: "https://upload.wikimedia.org/wikipedia/commons/5/52/Halic.png" )
+
+mumb = City.create(name: "Mumbai", picture: "https://upload.wikimedia.org/wikipedia/commons/6/66/Mumbai_skyline88907.jpg" )
 
 lv = City.create(name: "Las Vegas", picture: "http://i0006.photobucket.com/albums/0006/findstuff22/Best%20Images/Travel/BESTLas_Vegas_Strip-1-1.jpg" )
 
@@ -42,10 +76,18 @@ d = User.create(first_name: "David",last_name:"Lastname",email:"ddeuber@gmail.co
 
 jeremy = User.create(first_name: "Jeremy",last_name:"Lastname",email:"jeremybrenner0@gmail.com",password: "vagabond",password_confirmation: "vagabond",city: sf)
 
-j.posts.create(title: "Jared's post", content: "This place is awesome", city: sf)
+j.posts.create(title: "Jared's post", content: "This place is awesome", city: amst)
 
-l.posts.create(title: "Linda's post", content: "This place is awesome", city: sf)
+l.posts.create(title: "Linda's post", content: "This place is awesome", city: port)
 
 d.posts.create(title: "David's post", content: "This place is awesome", city: sf)
 
-jeremy.posts.create(title: "Jeremy's post", content: "This place is awesome", city: sf)
+jeremy.posts.create(title: "Jeremy's post", content: "This place is awesome", city: sing)
+
+
+
+
+
+
+
+
