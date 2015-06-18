@@ -1,5 +1,4 @@
 <%= render partial: "users/nav", locals: {user: @user} %>
-<<<<<<< HEAD
 <!--<div class="wrapper">
     <div class="box"> -->
     <div class="row margin50">
@@ -28,7 +27,7 @@
             <div class="row well">    
                 <%= button_to " x ", post_path(p.id), :class => "btn btn-xs btn-danger pull-right", :method => :delete,  data: { confirm: "Are you sure you want to delete #{p.title}?" } %>
                 <div class="col-sm-10">
-                    <h3><%= link_to "#{p.title}", post_path(p.id) %> <span class="small pull-right"><%= p.city.name %></span></h3>
+                    <h3><%= link_to "#{p.title}", post_path(p.id) %> <span class="small"><%= p.city.name %></span></h3>
                         <%= button_to "Edit Post", edit_post_path(p.id), :class => "btn btn-xs btn-primary top-margin20", :method => :get  %> 
                 </div>
             </div>
