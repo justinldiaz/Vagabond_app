@@ -1,4 +1,5 @@
-<%= render partial: "/users/nav" %>
+
+<%= render partial: "/users/nav", locals: {user: @user} %>
 <h1 class="text-center">Cities</h1>
 
 <div class="container-fluid">
@@ -11,3 +12,4 @@
 		<% end %>
 	</div>
 </div>
+
