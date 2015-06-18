@@ -1,10 +1,11 @@
 <%= render partial: "/users/nav" %>
 <div class="container">
+<div class="margin50">
 <h1><%= @city.name %></h1>
 
 <a><img class="city" src="<%= @city.picture %>"></a>
 
-<h2>recent travel log posts</h3>
+<h2>recent travel log posts</h2>
 	<% @cityposts.reverse.each do |p| %>
     <div class="row">    
                <%= button_to " x ", post_path(p.id), :class => "btn btn-xs btn-danger pull-right", :method => :delete,  data: { confirm: "Are you sure you want to delete #{p.title}?" } %>
@@ -20,4 +21,5 @@
        <div class="col-sm-12"><hr></div>
     </div>           
 <% end %>
+</div>
 </div>
