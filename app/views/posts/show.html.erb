@@ -14,5 +14,8 @@
 	</div>
 </div>
 
-<div class="col-md-9"><blockquote class="blockquote-reverse"><%= link_to "Back to Profile", user_path(@post.user_id) %></blockquote></div>
-</br>
+<div class="col-md-9"><blockquote class="blockquote-reverse"><%= link_to "Back to Profile", user_path(@post.user_id) %></blockquote>
+</div>
+
+
+<%= render partial: "/users/footer" %>

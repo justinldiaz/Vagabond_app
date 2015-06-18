@@ -1,27 +1,24 @@
-<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+<%= render partial: "users/nav", locals: {user: @user} %>
 
-	<header class="home">
-		<span id="logo">V</span><h1>Welcome to Vagabond</h1>
-	</header>
-	<div class="row">
+	<div class="row margin50">
 		<div class="col-md-9 center-block clear-float">
-			<div  class="center-block clear-float"><!-- iframe for video -->
+			<!-- iframe for video -->
 
-			<iframe width="960" height="540" src="https://www.youtube.com/embed/UGnrT0F-Igs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+			<iframe class="center-block clear-float" width="960" height="540" src="https://www.youtube.com/embed/UGnrT0F-Igs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen style="margin-top: 60px;"></iframe>
 
-			</div>
+
 		</div>
 	</div><!-- end row -->
 
 	<div class="row">
 
-		<div class="col-md-9 center-block clear-float margin50">
+		<div class="col-md-9 center-block clear-float">
 			<div class="row" style="padding-left: 100px;">
-			<div class="col-md-3 col-md-offset-2 well clean">
+			<div class="col-md-3 col-md-offset-2 btn btn-danger">
 				<%= link_to '<button class="btn btn-block btn-danger center-block">Sign Up</button>'.html_safe, sign_up_path %>
 				<p class="text-center top-margin20">Sign up &amp; travel with us</p>
 			</div>
-			<div class="col-md-3 col-md-offset-1 well clean">				
+			<div class="col-md-3 col-md-offset-1 btn btn-warning">				
 				<%= link_to '<button class="btn btn-block btn-warning center-block">Login</button>'.html_safe, login_path %>
 				<p class="text-center top-margin20">Sign in and share!</p>
 			</div>
@@ -34,6 +31,3 @@
 			<p class="text-center">&copy; Vagabond Travels, Inc. <span style=
 			"margin-left: 20px;">There are currently 653,42<%= @users.length %> registered users.</span></p>
 		</div>
-
-
-<!--</div> end container -->
