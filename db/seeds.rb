@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-toki = City.create(name: "Tokio", picture: "http://www.urlaubsguru.at/wp-content/uploads/2013/08/Artikelbild_Tokio_2-585x470.jpg" )
+toky = City.create(name: "Tokyo", picture: "http://www.urlaubsguru.at/wp-content/uploads/2013/08/Artikelbild_Tokio_2-585x470.jpg" )
 
 sidn = City.create(name: "Sidney", picture: "http://www.papeldeparede.etc.br/wallpapers/australia--sidney_7374_1920x1200.jpg" )
 
@@ -76,10 +76,18 @@ d = User.create(first_name: "David",last_name:"Lastname",email:"ddeuber@gmail.co
 
 jeremy = User.create(first_name: "Jeremy",last_name:"Lastname",email:"jeremybrenner0@gmail.com",password: "vagabond",password_confirmation: "vagabond",city: sf)
 
-j.posts.create(title: "Jared's post", content: "This place is awesome", city: sf)
+j.posts.create(title: "Jared's post", content: "This place is awesome", city: amst)
 
-l.posts.create(title: "Linda's post", content: "This place is awesome", city: sf)
+l.posts.create(title: "Linda's post", content: "This place is awesome", city: port)
 
 d.posts.create(title: "David's post", content: "This place is awesome", city: sf)
 
-jeremy.posts.create(title: "Jeremy's post", content: "This place is awesome", city: sf)
+jeremy.posts.create(title: "Jeremy's post", content: "This place is awesome", city: sing)
+
+
+
+
+
+
+
+
