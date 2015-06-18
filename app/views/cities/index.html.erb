@@ -1,6 +1,13 @@
 <%= render partial: "/users/nav" %>
 <h1 class="text-center">Cities</h1>
 
-<% @cities.each do |city| %>
-<h4 class="col-xs-6 col-sm-4 text-center"><img class="col-lg-12 thumbnail" src="<%= city.picture %>" height="250" width="100" ><%= link_to "#{city.name}", city_path(city.id)  %>  (<%= city.posts.length %>) </h2>
-<% end %>
+<div class="container-fluid">
+	<div class="row">
+		<% @cities.each do |city| %>
+			<div class="col-xs-6 col-sm-4 gallery" style="text-align:center;">
+				<img class="thumbnail img-responsive" src="<%= city.picture %>" width="350px" height="250px" >
+				<h4 class="text-center " style="display:in-line;"><%= link_to "#{city.name}", city_path(city.id)  %>  (<%= city.posts.length %>) </h4>
+			</div>
+		<% end %>
+	</div>
+</div>
