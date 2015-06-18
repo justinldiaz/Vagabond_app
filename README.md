@@ -10,7 +10,7 @@ Anyone should be able to navigate to Vagablog and see the latest fascinating tra
 Want to level up your storytelling abilities? Sign up as an official Vagablog user<sup>[blood samples may be required]</sup> and regale anonymous people on the internet with your enthralling bursts of inanity.  
 
 #####Workflow
-We are using two branches, dev, and master. All work is being done on dev, and moved over to master via pull requests on a daily basis, post testing. 
+ We are using two branches, dev, and master. All work is being done on dev, and moved over to master via pull requests on a daily basis, post testing. 
 
 Remember to reset the database after pulling if things don't work
 ```
