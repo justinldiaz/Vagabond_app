@@ -8,7 +8,7 @@
 </div>	
 <div>
 <h1 class="col-md-5 col-md-offset-3">Make a new post</h1>
-<div class="row"></div>
+<div class="row margin50"></div>
 <br>
 <%= form_for(@post) do |f|%>
 	<div class="row"><br>
@@ -18,7 +18,7 @@
 	<div class="col-md-5 col-md-offset-3"><%= f.text_area :content, placeholder: "Post content", class: "form-control", rows: "10" %></div>
 	</div><br>
 	<div class="row">
-	<div class="col-md-5 col-md-offset-3"><%= f.collection_select(:city_id, City.all, :id, :name) %></div>
+	<div class="col-md-3 col-md-offset-3 form-group"><%= f.collection_select(:city_id, City.all, :id, :name) %></div>
 	</div><br>
 	<div class="row">
 	<div class="col-md-5 col-md-offset-3"><%= f.submit "Submit", class: "btn btn-default" %></div>
@@ -26,3 +26,8 @@
 <% end %>
 
 </div>
+<script>
+$(document).ready(function() {
+	$('#post_city_id').addClass('form-control');
+});
+</script>
