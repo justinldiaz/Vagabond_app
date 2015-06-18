@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-toky = City.create(name: "Tokyo", picture: "http://www.urlaubsguru.at/wp-content/uploads/2013/08/Artikelbild_Tokio_2-585x470.jpg" )
+toky = City.create(name: "Tokyo", picture: "http://iliketowastemytime.com/system/files/tokyo-japan-hd-wallpaper.jpg?download=1" )
 
 sidn = City.create(name: "Sidney", picture: "http://www.papeldeparede.etc.br/wallpapers/australia--sidney_7374_1920x1200.jpg" )
 

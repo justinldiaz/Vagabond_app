@@ -1,6 +1,6 @@
-<%= render partial: "users/nav", locals: {user: @user} %>	
-<div>
-<div class="margin50">
+
+<%= render partial: "users/nav", locals: {user: @user} %>
+<div class="col-md-5 col-md-offset-3 margin50">
 	<% if flash['nopost'] %>
 		<% flash['nopost'].each do |k,v| %>
 			<div class="alert-danger text-center"><%= p v[0] %></div>
@@ -9,22 +9,27 @@
 </div>
 <h1 class="col-md-5 col-md-offset-3">Make a new post</h1>
 <div class="row margin50"></div>
+</div>	
 <%= form_for(@post) do |f|%>
+	<div class="row">
+	<div class="col-md-3 col-md-offset-3 form-group"><%= f.text_field :title, placeholder: "Post title", class: "form-control" %></div>
+	</div>
 	<div class="row"><br>
-	<div class="col-md-3 col-md-offset-3"><%= f.text_field :title, placeholder: "Post title", class: "form-control" %></div>
-	</div><br>
-	<div class="row"><br>
-	<div class="col-md-5 col-md-offset-3"><%= f.text_area :content, placeholder: "Post content", class: "form-control", rows: "10" %></div>
-	</div><br>
+	<div class="col-md-5 col-md-offset-3 form-group"><%= f.text_area :content, placeholder: "Post content", class: "form-control", rows: "10" %></div>
+	</div>
 	<div class="row">
 	<div class="col-md-3 col-md-offset-3 form-group"><%= f.collection_select(:city_id, City.all, :id, :name) %></div>
-	</div><br>
+	</div>
 	<div class="row">
-	<div class="col-md-5 col-md-offset-3"><%= f.submit "Submit", class: "btn btn-default" %></div>
-	</div><br>
+	<div class="col-md-5 col-md-offset-3 form-group"><%= f.submit "Submit", class: "btn btn-default" %></div>
+	</div>
 <% end %>
 
 </div>
+
+
+<%= render partial: "/users/footer" %>
+
 <script>
 $(document).ready(function() {
 	$('#post_city_id').addClass('form-control');
