@@ -1,16 +1,18 @@
-<%= render partial: "users/nav", locals: {user: @user} %>
+<script src="/app/assets/javascripts/jquery.tubular.1.0.js" type="text/javascript"></script>
 
+<%= render partial: "users/nav", locals: {user: @user} %>
+<div id="wrapper">
 	<div class="row margin50">
 		<div class="col-md-9 center-block clear-float">
-			<!-- iframe for video -->
+			<!-- iframe for video
 
 			<iframe class="center-block clear-float" width="960" height="540" src="https://www.youtube.com/embed/UGnrT0F-Igs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen style="margin-top: 60px;"></iframe>
-
+ 			-->
 
 		</div>
 	</div><!-- end row -->
 
-	<div class="row min-height100">
+	<div class="row min-height100" style="margin-top: 200px;">
 
 		<div class="col-md-9 center-block clear-float">
 			<div class="row" style="padding-left: 100px;">
@@ -31,3 +33,9 @@
 			<p class="text-center">&copy; Vagabond Travels, Inc. <span style=
 			"margin-left: 20px;">There are currently 653,42<%= @users.length %> registered users.</span></p>
 		</div>
+</div>
+<script>
+$(document).ready(function() {
+	$('#wrapper').tubular({videoId: 'UGnrT0F-Igs'});
+});
+</script>
