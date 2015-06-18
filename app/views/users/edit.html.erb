@@ -1,22 +1,28 @@
 <%= render partial: "users/nav", locals: {user: @user} %>
-<h1 class="col-md-3 col-md-offset-4">Edit my profile</h1>
-<br>
+<div class="row margin50">
+	<h1 class="col-md-3 col-md-offset-4">Edit my profile</h1>
 
-<%= form_for @user do |u| %>
+	<%= form_for @user do |u| %>
 	
 	<div class="row">
-		<div class="col-md-3 col-md-offset-4"><%= u.text_field :first_name, placeholder: "First Name", class: "form-control" %></div><br>
-	</div><br>
+		<div class="col-md-3 col-md-offset-4 form-group"><%= u.text_field :first_name, placeholder: "First Name", class: "form-control" %></div>
+	</div>
 
 	<div class="row">
-		<div class="col-md-3 col-md-offset-4"><%= u.text_field :last_name, placeholder: "Last Name", class: "form-control" %></div><br>
-	</div><br>
+		<div class="col-md-3 col-md-offset-4 form-group"><%= u.text_field :last_name, placeholder: "Last Name", class: "form-control" %></div>
+	</div>
 
 	<div class="row">
-		<div class="col-md-3 col-md-offset-4"><%= u.collection_select(:city_id, City.all, :id, :name) %></div><br>
-	</div><br>
+		<div class="col-md-3 col-md-offset-4 form-group"><%= u.collection_select(:city_id, City.all, :id, :name) %></div>
+	</div>
 
 	<div class="row">
-		<div class="col-md-3 col-md-offset-4"><%= u.submit "Update Profile", class: "btn btn-default" %></div><br>
-	</div><br>
+		<div class="col-md-3 col-md-offset-4 form-group"><%= u.submit "Update Profile", class: "btn btn-default" %></div>
+	</div>
 <% end %>
+</div>
+<script>
+$(document).ready(function() {
+	$('#user_city_id').addClass('form-control');
+});
+</script>

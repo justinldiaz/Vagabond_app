@@ -1,51 +1,49 @@
 <%= render partial: "users/nav", locals: {user: @user} %>
-<div class="wrapper">
-    <div class="box">
-        <div class="row">
-            <!-- sidebar -->
-            <div class="column col-sm-3" id="sidebar">
-            <a class="logo"><%= image_tag avatar_url(current_user, 200) %></a>
-            <div class="profile-item"><%= @user.first_name %></div>
-            <div class="profile-item"><%= @user.city.name %></div>
-            <br>
-            <div class="profile-item">Member since: <%= @user.created_at.strftime("%m/%d/%y") %></div>
-            <%= button_to "Make New Post", new_post_path, :class => "btn btn-xs btn-primary post-button", :method => :get  %>
+<!--<div class="wrapper">
+    <div class="box"> -->
+    <div class="row margin50">
+        <!-- sidebar -->
+        <div class="column col-sm-3" id="sidebar">
+        <a class="logo"><%= image_tag avatar_url(current_user, 200) %></a>
+        <div class="profile-item"><%= @user.first_name %></div>
+        <div class="profile-item"><%= @user.city.name %></div>
+        <br>
+        <div class="profile-item">Member since: <%= @user.created_at.strftime("%m/%d/%y") %></div>
+        <%= button_to "Make New Post", new_post_path, :class => "btn btn-xs btn-primary post-button", :method => :get  %>
+        </div>
+        <!-- /sidebar -->
+      
+        <!-- main -->
+        <div class="column col-sm-9" id="main">
+            <!-- <div class="padding"> -->
+            <div class="row">
+            <!-- <div class="full col-sm-9"> -->
+                <!-- content -->
+                <div class="page-header text-muted">Posts</div> 
             </div>
-            <!-- /sidebar -->
-          
-            <!-- main -->
-            <div class="column col-sm-9" id="main">
-                <div class="padding">
-                    <div class="full col-sm-9">
-                      
-                        <!-- content -->
-                        <div class="col-sm-12" id="featured">   
-                          <div class="page-header text-muted">
-                          Posts
-                          </div> 
-                        </div>
-                        
-                        <% @posts.reverse.each do |p| %>                   
-                        <!--/stories-->
-                        <div class="row">    
-                                   <%= button_to " x ", post_path(p.id), :class => "btn btn-xs btn-danger pull-right", :method => :delete,  data: { confirm: "Are you sure you want to delete #{p.title}?" } %>
-                          <div class="col-sm-10">
-                            <h3><%= link_to "#{p.title}", post_path(p.id) %></h3> <span class="label label-default"><%= p.city.name %></span>
-                          </div>
-                        </div>
-                        <br>
-                        <div class="col-md-12 row">
-                                <%= button_to "Edit Post", edit_post_path(p.id), :class => "btn btn-xs btn-primary", :method => :get  %>
-                        </div>
-                         <div class="row divider">    
-                           <div class="col-sm-12"><hr></div>
-                        </div>
-                        <% end %>
-                        
-                        </div>
-                    </div>
+                
+                <% @posts.reverse.each do |p| %>                   
+                <!--/stories-->
+            <div class="row well">    
+                <%= button_to " x ", post_path(p.id), :class => "btn btn-xs btn-danger pull-right", :method => :delete,  data: { confirm: "Are you sure you want to delete #{p.title}?" } %>
+                <div class="col-sm-10">
+                    <h3><%= link_to "#{p.title}", post_path(p.id) %> <span class="small pull-right"><%= p.city.name %></span></h3>
+                        <%= button_to "Edit Post", edit_post_path(p.id), :class => "btn btn-xs btn-primary top-margin20", :method => :get  %> 
                 </div>
             </div>
+
+                <div class="col-md-12 row">
+
+                </div>
+                 <div class="row divider">    
+                   <div class="col-sm-12"><hr></div>
+                </div>
+                <% end %>
+                
+            </div>
+            <!-- </div> -->
         </div>
+        <!-- </div> -->
     </div>
-</div>
+    <!-- </div> 
+</div>-->
